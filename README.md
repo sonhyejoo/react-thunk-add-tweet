@@ -29,7 +29,7 @@ Take a moment to look through all of the backend code. Then do the following:
 
 ## Frontend
 
-1. `cd` into the __backend__ directory
+1. `cd` into the __frontend__ directory
 2. Install dependencies with `npm install`
 3. Open `http://localhost:3000` to see the frontend
 
