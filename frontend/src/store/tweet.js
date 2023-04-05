@@ -19,10 +19,11 @@ const addTweet = (tweet) => {
 
 export const writeTweet = (tweet) => async (dispatch) => {
   const response = await fetch("/api/tweets", {
-    method: "post",
+    method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(tweet),
   });
+
   if (response.ok) {
     const data = await response.json();
     dispatch(addTweet(data));
@@ -56,6 +57,7 @@ const tweetsReducer = (state = initialState, action) => {
     case ADD_TWEET: {
       const newState = state;
       newState[action.tweet.id] = action.tweet;
+      console.log("newState: ", newState);
       return newState;
     }
     default:

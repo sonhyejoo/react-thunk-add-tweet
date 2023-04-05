@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getAllTweets } from './store/tweet';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllTweets } from "./store/tweet";
 
 const TweetList = () => {
   const dispatch = useDispatch();
   const tweetList = useSelector((state) => Object.values(state.tweet));
-  console.log(tweetList);
+  // console.log(tweetList);
 
   useEffect(() => {
     dispatch(getAllTweets());
