@@ -15,9 +15,10 @@ router.get(
 );
 
 router.post(
-  "/2",
+  "/",
   asyncHandler(async (req, res) => {
-    res.json({ message: "hit 2" });
+    const tweet = await Tweet.create(req.body);
+    res.json(tweet);
   })
 );
 
